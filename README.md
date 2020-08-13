@@ -278,4 +278,4 @@ ALTER TABLE ONLY public.ogrenci
 -- PostgreSQL database dump complete
 --
 
-# Note: Please change the "const connectionString = 'postgressql://postgres:123456@localhost:5432/yazokulu'" part.
+# Please change the "const connectionString = 'postgressql://postgres:123456@localhost:5432/yazokulu'" part.
