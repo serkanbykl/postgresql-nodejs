@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Teslim Edilen Ödevler</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="col-md-6 offset-3 text-center">
+        <h1>Teslim Edilmiş Ödevler</h1>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Öğrenci ID</th>
+      <th scope="col">Öğrenci Adı</th>
+      <th scope="col">Ödev Adı</th>
+      <th scope="col">Detayları</th>
+    </tr>
+  </thead>
+    <tbody>
+
+{{#odevgonderilen}}
+    <tr>
+      <th scope="row">{{ogrenciid}}
+</th>
+      <td>{{ogrenciadi}}
+</td>
+<td>{{odevadi}}</td>
+      <td><a href="/goruntule/cevap/{{id}}" class="btn btn-danger">Detayları Gör</a>
+    </tr>
+{{/odevgonderilen}}
+  </tbody>
+</table>
+
+   <form action="/hoca/ara" method="GET">
+      <input class="form-control mb-3" name="ara" type="search" placeholder="Ödev Adına Göre Arama Kutusu">
+      <button class="btn btn-danger mb-3" type="submit">Ara</button>
+    </form>
+
+    <a href="/hoca/index" class="btn btn-light">Öğretmen Paneline Dön</a>
+</div>
+
+ 
+
+
+    </body>
+</html>
+
+

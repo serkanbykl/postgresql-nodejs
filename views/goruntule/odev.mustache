@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Ödev Görüntüleme Sayfası</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="book-form">
+                <div class="col-md-6 offset-md-3 text-center">
+
+        <h1>ÖDEVİ GÖRÜNTÜLE</h1>
+
+
+
+{{#odev}}
+<p>Ödev ID</p>
+<input class="form-control mb-3" value={{id}} name="odevid" readonly>
+<p>Ödev Adı</p>
+<input class="form-control mb-3" value={{odevadi}} name="odevadi" readonly>
+<p>Ders Adı</p>
+<input class="form-control mb-3" value={{dersadi}} name="dersadi" readonly>
+<p>Fakülte ID</p>
+<input class="form-control mb-3" value={{fakulteid}} name="fakulteid" readonly>
+<p>Bölüm ID</p>
+<input class="form-control mb-3" value={{bolumid}} name="bolumid" readonly>
+<p>Ödev Açıklaması</p>
+<textarea class="form-control mb-3" readonly> {{odevaciklama}}</textarea>
+
+{{/odev}}
+<a href="/ogrenci/index" class="btn btn-success mb-3"> Öğrenci Panele Dön </a>
+</div>
+    </body>
+</html>
+
+

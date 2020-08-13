@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ödev Gönder/Düzenle</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="col-md-6 offset-3 text-center">
+        <h1>Ödev Gönder/Düzenle</h1>
+
+        <form method="POST">
+        <p>Ödev Açıklaması</p>
+        <input class="form-control mb-3" placeholder="Ödevin Açıklamasını Giriniz." name="odevaciklama" type="text" >
+                <p>Ödevin Adı</p>
+
+                <input class="form-control mb-3" placeholder="Ödevin Adını Giriniz." name="odevadi" type="text" >
+        <p>Fakülte Seçiniz</p>
+
+<select name="fakid" class="form-control mb-3">
+             {{#fakulte}}
+ 
+  <option value="{{id}}"">{{fakulteadi}}</option>
+  
+  
+
+
+        {{/fakulte}}
+</select>
+        <p>Bölüm Seçiniz</p>
+
+      <select name="bolid" class="form-control mb-3">
+             {{#bolum}}
+ 
+  <option value="{{id}}"">{{bolumadi}}</option>
+  
+  
+
+
+        {{/bolum}}
+</select>
+        <p>Ders Seçiniz</p>
+
+      <select name="dersadi" class="form-control mb-3">
+             {{#ders}}
+ 
+  <option value="{{dersadi}}"">{{dersadi}}</option>
+  
+  
+
+
+        {{/ders}}
+</select>
+
+
+
+<button type="submit" class="btn btn-dark mb-3">Ödev Ekle</button>
+
+        </form>
+<h1>Önceden Gönderilmiş Ödevler</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Ödev Adı</th>
+      <th scope="col">Ders Adı</th>
+      <th scope="col">Ödev Açıklaması</th>
+      <th scope="col">Son Teslim Tarihi</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+    <tbody>
+
+{{#odev}}
+    <tr>
+      <th scope="row">{{odevadi}}
+</th>
+      <td>{{dersadi}}
+</td>
+<td>{{odevaciklama}}</td>
+      <td>{{bitistarihi}}</td>
+      <td><a href="/hoca/sil/{{id}}" class="btn btn-danger">Sil</a>
+    </tr>
+{{/odev}}
+  </tbody>
+</table>
+
+<a href="/hoca/index" class="btn btn-light mb-3">Öğretmen Paneline Dön</a>
+</div>
+
+
+    </body>
+</html>
+
+

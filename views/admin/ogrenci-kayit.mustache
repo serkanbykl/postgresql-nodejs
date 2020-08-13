@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <title>ADMIN ÖĞRENCİ KAYIT SAYFASI</title>
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        
+
+<div class="col-md-6 offset-3 text-center" >
+        <h1>ADMIN ÖĞRENCİ KAYIT SAYFASI</h1>
+
+        <form method="POST">
+        <input class="form-control mb-3" placeholder="Doğum Tarihi" name="dt" type="date" required >
+        <input class="form-control mb-3" placeholder="Öğrenci Hakkında" name="oh" type="text" required >
+        <input class="form-control mb-3" placeholder="Öğrenci İletişim" name="oi" type="text" required >
+        <input class="form-control mb-3" placeholder="Öğrenci Ad" name="ad" type="text" required >
+        <input class="form-control mb-3" placeholder="Öğrenci Soyad" name="soyad" type="text" required >
+        <input class="form-control mb-3" placeholder="Öğrenci Kullanıcı Adı" name="ogrenciusername" type="text" required >
+        <input class="form-control mb-3" placeholder="Öğrenci Şifre" name="ogrencipassword" type="text" required >
+
+    <select class="form-control mb-3" name="fakid" required >
+             {{#fakulte}}
+
+  <option value={{id}}>{{fakulteadi}}</option>
+  
+        {{/fakulte}}
+</select>
+      <select class="form-control mb-3" name="bolid" required >
+             {{#bolum}}
+  <option value={{id}}>{{bolumadi}}</option>
+        {{/bolum}}
+</select>
+<button type="submit" class="btn btn-dark">Kaydet</button>
+<a href="/admin/index" class="btn btn-light">Admin Panel</a>
+        </form>
+</div>
+
+    </body>
+</html>
+
+

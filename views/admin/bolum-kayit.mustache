@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+            <title>ADMIN BÖLÜM KAYIT SAYFASI</title>
+
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+                <div class="col-md-4 offset-4 text-center">
+
+
+        <h1>ADMIN BÖLÜM KAYIT SAYFASI</h1>
+
+        <form method="POST" >
+        <input class="form-control mb-3" placeholder="Bölüm Adı" name="bolumadi" type="text" required >
+         <select  class="form-control mb-3" name="fakulteid">
+             {{#fakulte}}
+            <option value={{id}} type="number">{{fakulteadi}}</option>
+            {{/fakulte}}
+        </select>
+<button type="submit" class="btn btn-dark">Kaydet</button>
+<a href="/admin/index" class="btn btn-light">Admin Panel</a>        </form>
+
+</div>
+    </body>
+</html>
+
+

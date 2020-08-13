@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+            <title>ADMIN DERS KAYIT SAYFASI</title>
+
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="book-form">
+                <div class="col-md-4 offset-4 text-center">
+
+
+        <h1>ADMIN DERS KAYIT SAYFASI</h1>
+
+        <form method="POST" action="/admin/ders" >
+        <input class="form-control mb-3" placeholder="Dersin Adı" name="dadi" type="text" required>
+        <input class="form-control mb-3" placeholder="Ders Açıklaması" name="daciklama" type="text" required>
+
+
+
+    <select name="fakid" class="form-control mb-3" >
+             {{#fakulte}}
+ 
+  <option value="{{id}}"">{{fakulteadi}}</option>
+  
+  
+
+
+        {{/fakulte}}
+</select>
+
+      <select name="bolid" class="form-control mb-3" >
+             {{#bolum}}
+ 
+  <option value="{{id}}"">{{bolumadi}}</option>
+  
+  
+
+
+        {{/bolum}}
+</select>
+
+<button type="submit" class="btn btn-dark">Kaydet</button>
+<a href="/admin/index" class="btn btn-light">Admin Panel</a>
+        </form>
+
+</div>
+    </body>
+</html>
+
+

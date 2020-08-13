@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ödev Cevabı Görüntüle</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="col-md-6 offset-3 text-center">
+        <h1>Ödev Cevabı Görüntüle</h1>
+
+
+
+{{#odev}}
+<p>ÖDEV ID</p>
+<input class="form-control mb-3" value={{id}} name="odevid" readonly>
+<p>ÖDEV ADI</p>
+<input class="form-control mb-3" value={{odevadi}} name="odevadi" readonly>
+<p>ÖDEV AÇIKLAMA</p>
+<input class="form-control mb-3" value={{odevaciklama}} name="odevaciklama" readonly>
+<p>DERSADI</p>
+
+<input class="form-control mb-3" value={{dersadi}} name="dersadi" readonly>
+<p>Fakulte ID</p>
+<input class="form-control mb-3" value={{fakulteid}} name="fakulteid" readonly>
+<p>BolumID</p>
+<input class="form-control mb-3" value={{bolumid}} name="bolumid" readonly>
+<p>Ödev Gönderilme Tarihi</p>
+{{gonderilmetarihi}}
+<p>Ödev Güncelleme Zamanı (Varsa)</p>
+{{guncellemetarihi}}
+
+<p>Öğrenci Adı</p>
+<input class="form-control mb-3" placeholder={{ogrenciadi}} name="ogrenciadi" readonly>
+
+<p>Ödev İçerik</p>
+<textarea class="form-control mb-3" readonly> {{odevicerik}}</textarea>
+
+
+{{/odev}}
+
+<a href="/hoca/index" class="btn btn-light mb-3">Öğretmen Paneline Dön</a>
+
+</div>
+    </body>
+</html>
+
+

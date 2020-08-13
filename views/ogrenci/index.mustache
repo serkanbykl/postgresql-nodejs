@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>ÖĞRENCİ ÖDEV LİSTELE</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+                <div class="col-md-8 offset-md-2 text-center">
+
+        <h1>ÖĞRENCİ ÖDEV LİSTELE</h1>
+<p> Merhaba {{#ogrenci}} {{ad}}{{/ogrenci}} {{#fakulteadi}}
+{{fakulteadi}}
+{{/fakulteadi}} / {{#bolumadi}}
+{{bolumadi}}
+{{/bolumadi}} </p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Ders Adı</th>
+      <th scope="col">Ödev Adı</th>
+      <th scope="col">Görüntüle</th>
+      <th scope="col">Ödevi Gönder</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+
+
+{{#odev}}
+
+  <tr>
+      <th scope="col">{{dersadi}}</th>
+      <th scope="col">{{odevadi}}</th>
+      <th scope="col"><a href=/goruntule/{{id}}>Görüntüle</a></th>
+      <th scope="col"><a href=/ogrenci/gonder/{{id}}>Ödev Gönder</a></th>
+    </tr>
+
+
+{{/odev}}
+
+ </tbody>
+</table>
+</div>
+    </body>
+</html>
+
+

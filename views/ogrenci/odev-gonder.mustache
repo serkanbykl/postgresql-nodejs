@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="book-form">
+        
+
+        <div class="col-md-6 offset-3 text-center">
+        <h1>ÖDEV GÖNDER</h1>
+
+
+
+<form method="POST" >
+
+{{#odev}}
+<p>Ödev ID</p>
+<input class="form-control mb-3" value={{id}} name="odevid" readonly>
+<p>Ödev ADI</p>
+<input class="form-control mb-3" value={{odevadi}} name="odevadi" readonly>
+<p>Ders Adı</p>
+<input class="form-control mb-3" value={{dersadi}} name="dersadi" readonly>
+<p>Fakulte ID</p>
+<input class="form-control mb-3" value={{fakulteid}} name="fakulteid" readonly>
+<p>Bolüm ID</p>
+<input class="form-control mb-3" value={{bolumid}} name="bolumid" readonly>
+<p>Ödev Açıklaması</p>
+<input class="form-control mb-3" value={{odevaciklama}} name="odevaciklama" readonly>
+<p>Hoca ID</p>
+<input class="form-control mb-3" value={{hocaid}} name="hoca,d" readonly>
+{{/odev}}
+{{#ogrenci}}
+<p>Öğrenci ID</p>
+<input class="form-control mb-3" value={{ogrenci}} name="ogrenciid" readonly>
+{{/ogrenci}}
+
+{{#gonderilenodev}}
+<p>Gönderilen Ödevin İçeriği</p>
+
+<textarea class="form-control mb-3" name="odevicerik" type="text"> {{odevicerik}}</textarea>
+ {{/gonderilenodev}}
+
+<button type="submit" class="btn btn-dark" >Gönder</button>
+</form>
+</div>
+    </body>
+</html>
+
+

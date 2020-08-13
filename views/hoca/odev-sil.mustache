@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ödev Sil</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body class="book-form">
+        <div class="col-md-6 offset-3 text-center">
+        <h1>Ödev Sil</h1>
+
+
+{{#odev}}
+"{{dersadi}}" Dersi
+"{{odevadi}}" Adlı Ödevi.
+Açıklama:
+"{{odevaciklama}}"
+
+{{/odev}}
+
+<p><form method="POST">
+<br>/!\ Ödevle birlikte önceden gönderilmiş ödevlerde silinecektir.</br>
+<button type="submit" class="btn btn-danger">Silmek İstediğimden Eminim</button>
+
+</form>
+</p>
+</div>
+
+
+    </body>
+</html>
+
+
